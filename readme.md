@@ -1,1 +1,3 @@
-# scroll-snap-102
+# scroll-snap-101
+
+learning css `scroll-snap` properties.
