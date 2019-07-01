@@ -1,3 +1,7 @@
+:root {
+  --grid-1u: 32px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -49,7 +53,7 @@ section {
   padding: 64px 2em 128px;
   scroll-snap-align: start;
   height: 100%;
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .section-1 {
@@ -69,4 +73,10 @@ section {
 .section-4 {
   background-color: #7E7F9A;
   color: #ededff;
+}
+
+.container {
+	max-width: calc(var(--grid-1u) * 22);
+	margin-left: auto;
+	margin-right: auto;
 }
