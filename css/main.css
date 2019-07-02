@@ -101,31 +101,38 @@ nav li {
 	flex-shrink: 0;
 }
 
+[class^='product-'],
+[class^='section-'] {
+	padding: 64px 2em 128px;
+}
+
 [class^='section-'] {
 	scroll-snap-align: start;
-	padding-top: 64px;
-	padding: 64px 2em 128px;
 	height: 100%;
 	overflow: hidden;
 }
 
+.product-1,
 .sub-product:nth-child(1),
 .row-slide:nth-child(1) {
 	background-color: #cae7b9;
 	color: #1e4416;
 }
 
+.product-2,
 .sub-product:nth-child(2),
 .row-slide:nth-child(2) {
 	background-color: #f3de8a;
 	color: #80430c;
 }
 
+.product-3,
 .sub-product:nth-child(3),
 .row-slide:nth-child(3) {
 	background-color: #eb9486;
 }
 
+.product-4,
 .sub-product:nth-child(4),
 .row-slide:nth-child(4) {
 	background-color: #7e7f9a;
@@ -141,9 +148,11 @@ nav li {
 
 
 .product--horizontal {
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	flex-direction: column;
 	scroll-snap-type: y mandatory;
+	-webkit-overflow-scrolling: touch;
 }
 
 .row-slide {
@@ -153,6 +162,7 @@ nav li {
 	display: flex;
 	flex-direction: row;
 	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
 	overflow-x: scroll;
 }
 
@@ -161,5 +171,20 @@ nav li {
 	flex-shrink: 0;
 	height: 100vh;
 	padding-top: 64px;
+	scroll-snap-align: start;
+}
+
+/* grid */
+.product--grid {
+	display: grid;
+	height: 100vh;
+	scroll-snap-type: both mandatory;
+	grid-template-columns: 100vw 100vw 100vw 100vw;
+	grid-template-rows: 100vh 100vh 100vh 100vh;
+	grid-auto-flow: column;
+}
+
+.product--grid [class*="section-"] {
+	height: 100vh;
 	scroll-snap-align: start;
 }
