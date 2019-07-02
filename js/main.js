@@ -11,6 +11,8 @@
 				e.preventDefault();
 
 				const target = e.target.getAttribute('href');
+				resetNavigationState();
+				setActiveNavItem(target);
 				scrollTo(target);
 			});
 		});
@@ -33,9 +35,7 @@
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
-					resetNavigationState();
 					const id = entry.target.id;
-					setActiveNavItem(id);
 					setLinkTargets(id);
 					updateURLHash(id);
 				}

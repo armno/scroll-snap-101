@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans+Narrow:700&display=swap');
+
 :root {
 	--grid-1u: 32px;
 }
@@ -18,8 +20,8 @@ body {
 	color: #333231;
 	/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
 		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-	font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-		'Arial', sans-serif;
+	font-family: 'Nunito Sans', 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue',
+		'Helvetica', 'Arial', sans-serif;
 	line-height: 1.45;
 	-webkit-font-smoothing: antialiased;
 }
@@ -30,6 +32,7 @@ a {
 
 p {
 	margin-bottom: 1.25em;
+	max-width: 31em;
 }
 
 blockquote p {
@@ -43,7 +46,7 @@ h4,
 h5 {
 	margin: 2.75rem 0 1rem;
 	line-height: 1.15;
-	text-transform: uppercase;
+	font-family: 'PT Sans Narrow', sans-serif;
 }
 
 h1 {
@@ -66,7 +69,7 @@ h4 {
 
 p.lead {
 	font-size: 1.332em;
-	line-height: 1.4;
+	line-height: 1.35;
 }
 
 nav {
