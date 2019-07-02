@@ -102,8 +102,7 @@ nav li {
 	flex-shrink: 0;
 }
 
-[class^='product-'],
-[class^='section-'] {
+.section {
 	padding: 64px 2em 128px;
 }
 

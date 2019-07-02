@@ -1,7 +1,26 @@
 (function() {
 	document.addEventListener('DOMContentLoaded', () => {
 		observeScrolling();
+
+		activateNav();
 	});
+
+	function activateNav() {
+		document.querySelectorAll('#nav a').forEach(a => {
+			a.addEventListener('click', e => {
+				e.preventDefault();
+
+				const target = e.target.getAttribute('href');
+				scrollTo(target);
+			});
+		});
+	}
+
+	function scrollTo(sectionId) {
+		document.querySelector(sectionId).scrollIntoView({
+			behavior: 'smooth'
+		});
+	}
 
 	function observeScrolling() {
 		// 1. create options object
@@ -24,8 +43,8 @@
 		}, observerOptions);
 
 		// 3. observe elements using observer object from 2.
-		const elements = document.querySelectorAll('[class*="section"]');
-		elements.forEach(e => observer.observe(e));
+		const sections = document.querySelectorAll('.section');
+		sections.forEach(e => observer.observe(e));
 	}
 
 	function setActiveNavItem(id) {
@@ -45,13 +64,13 @@
 
 	function resetNavigationState() {
 		document
-			.querySelectorAll('nav li')
+			.querySelectorAll('#nav li')
 			.forEach(li => li.classList.remove('active'));
 	}
 
 	function setLinkTargets(sectionId) {
 		const sectionIndex = sectionId.charAt(sectionId.length - 1);
-		const navItems = document.querySelectorAll('nav li');
+		const navItems = document.querySelectorAll('#nav li');
 		navItems.forEach(item => {
 			const a = item.querySelector('a');
 			const newHref = a.getAttribute('href').replace(/.$/, sectionIndex);
