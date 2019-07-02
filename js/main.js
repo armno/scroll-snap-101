@@ -15,8 +15,10 @@
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					resetNavigationState();
-					setActiveNavItem(entry.target.id);
-					setLinkTargets(entry.target.id);
+					const id = entry.target.id;
+					setActiveNavItem(id);
+					setLinkTargets(id);
+					updateURLHash(id);
 				}
 			});
 		}, observerOptions);
@@ -55,5 +57,9 @@
 			const newHref = a.getAttribute('href').replace(/.$/, sectionIndex);
 			a.setAttribute('href', newHref);
 		});
+	}
+
+	function updateURLHash(sectionId) {
+		document.location.hash = sectionId;
 	}
 })();
