@@ -16,6 +16,7 @@
 				if (entry.isIntersecting) {
 					resetNavigationState();
 					setActiveNavItem(entry.target.id);
+					setLinkTargets(entry.target.id);
 				}
 			});
 		}, observerOptions);
@@ -44,5 +45,15 @@
 		document
 			.querySelectorAll('nav li')
 			.forEach(li => li.classList.remove('active'));
+	}
+
+	function setLinkTargets(sectionId) {
+		const sectionIndex = sectionId.charAt(sectionId.length - 1);
+		const navItems = document.querySelectorAll('nav li');
+		navItems.forEach(item => {
+			const a = item.querySelector('a');
+			const newHref = a.getAttribute('href').replace(/.$/, sectionIndex);
+			a.setAttribute('href', newHref);
+		});
 	}
 })();
