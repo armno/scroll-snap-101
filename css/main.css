@@ -182,6 +182,7 @@ nav li {
 	grid-template-columns: 100vw 100vw 100vw 100vw;
 	grid-template-rows: 100vh 100vh 100vh 100vh;
 	grid-auto-flow: column;
+	scroll-behavior: smooth;
 }
 
 .product--grid [class*="section-"] {
