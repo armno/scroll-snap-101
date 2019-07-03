@@ -3,6 +3,7 @@
 		observeScrolling();
 
 		activateNav();
+		checkLocationHash();
 	});
 
 	function activateNav() {
@@ -37,7 +38,6 @@
 				if (entry.isIntersecting) {
 					const id = entry.target.id;
 					setLinkTargets(id);
-					updateURLHash(id);
 				}
 			});
 		}, observerOptions);
@@ -78,7 +78,15 @@
 		});
 	}
 
-	function updateURLHash(sectionId) {
-		document.location.hash = sectionId;
+	function checkLocationHash() {
+		const hash = document.location.hash;
+		if (!hash) {
+			return;
+		}
+
+		// scroll to the section
+		setTimeout(() => {
+			scrollTo(hash);
+		}, 300);
 	}
 })();
