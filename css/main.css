@@ -8,7 +8,7 @@
 html {
 	font-size: 19px;
 }
-body {
+body.product-info {
 	font-weight: 400;
 	line-height: 1.45;
 	margin: 0;
@@ -19,10 +19,11 @@ body {
 	line-height: 1.45;
 	-webkit-font-smoothing: antialiased;
 }
-a {
+
+.product-info a {
 	color: inherit;
 }
-p {
+.product-info p {
 	margin-bottom: 1.25em;
 	max-width: 31em;
 }
@@ -53,18 +54,18 @@ p.lead {
 	font-size: 1.332em;
 	line-height: 1.35;
 }
-nav {
+.product-info-nav {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	background-color: rgba(255, 255, 255, 0.5);
 }
-nav a {
+.product-info-nav a {
 	text-decoration: none;
 	color: #333231;
 }
-nav .active a {
+.product-info-nav .active a {
 	color: #008bd0;
 }
 .nav-list {
@@ -73,7 +74,7 @@ nav .active a {
 	flex-direction: row;
 	padding: 0 2em;
 }
-nav li {
+.product-info-nav li {
 	width: 25%;
 }
 .product {
