@@ -1,44 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans+Narrow:700&display=swap');
-
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans+Narrow:700&display=swap);
 :root {
 	--grid-1u: 32px;
 }
-
 * {
 	box-sizing: border-box;
 }
-
 html {
 	font-size: 19px;
 }
-
 body {
 	font-weight: 400;
 	line-height: 1.45;
 	margin: 0;
 	padding: 0;
 	color: #333231;
-	/* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-		Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
 	font-family: 'Nunito Sans', 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue',
-		'Helvetica', 'Arial', sans-serif;
+		Helvetica, Arial, sans-serif;
 	line-height: 1.45;
 	-webkit-font-smoothing: antialiased;
 }
-
 a {
 	color: inherit;
 }
-
 p {
 	margin-bottom: 1.25em;
 	max-width: 31em;
 }
-
-blockquote p {
-	font-style: italic;
-}
-
 h1,
 h2,
 h3,
@@ -48,30 +35,24 @@ h5 {
 	line-height: 1.15;
 	font-family: 'PT Sans Narrow', sans-serif;
 }
-
 h1 {
 	margin-top: 0;
 	font-size: 5.653em;
 }
-
 h2 {
 	font-size: 3.998em;
 }
-
 h3 {
 	font-size: 2.827em;
 	font-weight: 400;
 }
-
 h4 {
 	font-size: 1.999em;
 }
-
 p.lead {
 	font-size: 1.332em;
 	line-height: 1.35;
 }
-
 nav {
 	position: fixed;
 	top: 0;
@@ -79,34 +60,28 @@ nav {
 	right: 0;
 	background-color: rgba(255, 255, 255, 0.5);
 }
-
 nav a {
 	text-decoration: none;
 	color: #333231;
 }
-
 nav .active a {
 	color: #008bd0;
 }
-
 .nav-list {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
 	padding: 0;
 }
-
 nav li {
 	width: 25%;
 }
-
 .product {
 	height: 100vh;
 	overflow-y: scroll;
 	display: flex;
 	scroll-snap-type: x mandatory;
 }
-
 .sub-product {
 	scroll-snap-align: start;
 	scroll-snap-type: y mandatory;
@@ -115,56 +90,22 @@ nav li {
 	width: 100%;
 	flex-shrink: 0;
 }
-
 .section {
 	padding: 64px 2em 128px;
 }
-
 .section--no-title {
 	padding-top: 128px;
 }
-
 [class^='section-'] {
 	scroll-snap-align: start;
 	height: 100%;
 	overflow: hidden;
 }
-
-/* content */
 .container {
 	max-width: calc(var(--grid-1u) * 22);
 	margin-left: auto;
 	margin-right: auto;
 }
-
-.product--horizontal {
-	overflow-x: hidden;
-	overflow-y: scroll;
-	flex-direction: column;
-	scroll-snap-type: y mandatory;
-	-webkit-overflow-scrolling: touch;
-}
-
-.row-slide {
-	scroll-snap-align: start;
-	width: 100%;
-	flex-shrink: 0;
-	display: flex;
-	flex-direction: row;
-	scroll-snap-type: x mandatory;
-	-webkit-overflow-scrolling: touch;
-	overflow-x: scroll;
-}
-
-.slide {
-	width: 100%;
-	flex-shrink: 0;
-	height: 100vh;
-	padding-top: 64px;
-	scroll-snap-align: start;
-}
-
-/* grid */
 .product--grid {
 	display: grid;
 	height: 100vh;
@@ -175,7 +116,6 @@ nav li {
 	grid-auto-flow: column;
 	scroll-behavior: smooth;
 }
-
 .product--grid [class*='section-'] {
 	height: 100vh;
 	scroll-snap-align: start;
@@ -184,19 +124,15 @@ nav li {
 .section-4 {
 	color: rgba(255, 255, 255, 0.9);
 }
-
 .section-1 {
 	background-color: #008bd0;
 }
-
 .section-2 {
 	background-color: #fff;
 }
-
 .section-3 {
 	background-color: #d5e0e5;
 }
-
 .section-4 {
 	background-color: #235d7a;
 	color: #fff;
