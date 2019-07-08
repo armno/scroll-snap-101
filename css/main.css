@@ -54,6 +54,7 @@ p.lead {
 	line-height: 1.35;
 }
 .product-info-nav {
+	z-index: 10;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -115,6 +116,7 @@ p.lead {
 	grid-template-rows: 100vh 100vh 100vh 100vh;
 	grid-auto-flow: column;
 	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
 }
 
 .product--grid.scrollable {
