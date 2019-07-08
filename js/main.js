@@ -20,9 +20,25 @@
 	}
 
 	function scrollTo(sectionId) {
+		/**
+		 * special hack for firefox!
+		 * `scrollIntoView` doesn't work on elements with `overflow: hidden`
+		 * on firefox.
+		 * so we add a class `.scrollable` which sets `overflow: scroll` property
+		 * to the main element. then we scroll.
+		 * then we remove the class after scrolling is done (assuming 500ms is enough)
+		 */
+		const main = document.querySelector('#main');
+		const className = 'scrollable';
+		main.classList.add(className);
+
 		document.querySelector(sectionId).scrollIntoView({
 			behavior: 'smooth'
 		});
+
+		setTimeout(() => {
+			main.classList.remove(className);
+		}, 500);
 	}
 
 	function observeScrolling() {

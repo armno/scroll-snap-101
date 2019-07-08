@@ -117,6 +117,11 @@ p.lead {
 	grid-auto-flow: column;
 	scroll-behavior: smooth;
 }
+
+.product--grid.scrollable {
+	overflow: scroll;
+}
+
 .product--grid [class*='section-'] {
 	height: 100vh;
 	scroll-snap-align: start;
