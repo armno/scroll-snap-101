@@ -144,3 +144,22 @@ p.lead {
 	background-color: #235d7a;
 	color: #fff;
 }
+
+.product--column {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-x: hidden;
+}
+
+.product--column .sub-product {
+	width: 100%;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
+}
+
+.product--column .sub-product .section {
+	height: 100vh;
+	scroll-snap-align: start;
+}
