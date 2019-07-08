@@ -93,6 +93,7 @@ p.lead {
 }
 .section {
 	padding: 64px 2em 128px;
+	overflow: hidden;
 }
 .section--no-title {
 	padding-top: 128px;

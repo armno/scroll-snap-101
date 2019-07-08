@@ -50,11 +50,12 @@
 
 		// 2. create InsectionObserver object with config from 1.
 		const observer = new IntersectionObserver(entries => {
+			console.log('in observer');
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const id = entry.target.id;
-					console.log('intersecting', id);
-					setLinkTargets(id);
+					// setLinkTargets(id);
+					scrollOtherContainers(entry.target);
 				}
 			});
 		}, observerOptions);
@@ -105,5 +106,18 @@
 		setTimeout(() => {
 			scrollTo(hash);
 		}, 300);
+	}
+
+	function scrollOtherContainers(currentElement) {
+		// get 'other containers' elements - all except self
+		// each of them > scroll
+
+		const elementTop = currentElement.offsetTop;
+		const currentId = currentElement.id;
+		const [label, subProduct, section] = [...currentId.split('-')];
+		const selector = `.sub-product:not(.sub-product-${subProduct})`;
+		const neighbours = document.querySelectorAll(selector);
+
+		neighbours.forEach(element => (element.scrollTop = elementTop));
 	}
 })();
