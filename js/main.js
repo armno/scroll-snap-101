@@ -12,8 +12,9 @@
 				e.preventDefault();
 
 				const target = e.target.getAttribute('href');
+				const parent = e.target.parentNode;
 				resetNavigationState();
-				setActiveNavItem(target);
+				setActiveNavItem(parent);
 				scrollTo(target);
 			});
 		});
@@ -65,19 +66,8 @@
 		sections.forEach(e => observer.observe(e));
 	}
 
-	function setActiveNavItem(id) {
-		let nav;
-		if (id.includes('section-1')) {
-			nav = '#nav-product-1';
-		} else if (id.includes('section-2')) {
-			nav = '#nav-product-2';
-		} else if (id.includes('section-3')) {
-			nav = '#nav-product-3';
-		} else {
-			nav = '#nav-product-4';
-		}
-
-		document.querySelector(nav).classList.add('active');
+	function setActiveNavItem(element) {
+		element.classList.add('active');
 	}
 
 	function resetNavigationState() {
