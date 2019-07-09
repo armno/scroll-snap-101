@@ -2,8 +2,9 @@
 
 learning css `scroll-snap` properties, along with intersectionobserver, css grid, flexbox, scrollintoview api.
 
-- [master](https://github.com/armno/scroll-snap-101/)
-- [separate-container](https://github.com/armno/scroll-snap-101/tree/feature/seperate-container)
+- [master](https://github.com/armno/scroll-snap-101/) - grid layout
+- [separate-container](https://github.com/armno/scroll-snap-101/tree/feature/seperate-container) - flexbox layout with container columns
+- [fullpagejs](https://github.com/armno/scroll-snap-101/tree/feature/fullpagejs) - a half-working version, implemented with fullpagejs.
 
 ## setup
 
