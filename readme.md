@@ -1,6 +1,10 @@
 # scroll-snap-101
 
-learning css `scroll-snap` properties.
+scrolling prototype.
+
+this branch is a version with
+
+- each product has its own container element. sections in the product are inside this container.
 
 ## setup
 
