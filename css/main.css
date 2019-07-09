@@ -91,13 +91,14 @@ p.lead {
 	width: 100%;
 	flex-shrink: 0;
 }
-.section {
+.slide-section {
 	padding: 64px 2em 128px;
+	height: 100%;
 }
 .section--no-title {
 	padding-top: 128px;
 }
-[class^='section-'] {
+[class^='slide-section-'] {
 	scroll-snap-align: start;
 	height: 100%;
 	overflow: hidden;
